@@ -1,10 +1,13 @@
-import { StyleSheet } from 'react-native'
+import EStyleSheet from "react-native-extended-stylesheet";
 import { Metrics, ApplicationStyles } from '../../Themes/'
 
-export default StyleSheet.create({
+export default EStyleSheet.create({
   ...ApplicationStyles.screen,
   container: {
-    paddingBottom: Metrics.baseMargin
+    paddingBottom: Metrics.baseMargin,
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center'
   },
   logo: {
     marginTop: Metrics.doubleSection,
@@ -14,5 +17,14 @@ export default StyleSheet.create({
   },
   centered: {
     alignItems: 'center'
-  }
+  },
+
+  mainContainer: {
+    ...ApplicationStyles.screen.mainContainer,
+    overflow: 'hidden'
+  },
+  topContainer: {
+    flex: 3
+  },
+
 })
