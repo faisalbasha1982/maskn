@@ -40,7 +40,7 @@ const instructions = Platform.select({
         'Shake or press menu button for dev menu',
 });
 
-class ScreenFive extends Component {
+class RentSellCar extends Component {
 
     render() {
 
