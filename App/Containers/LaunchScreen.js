@@ -13,7 +13,12 @@ import {
     Image,
     ImageBackground,
     TouchableOpacity,
+<<<<<<< HEAD
     Dimensions
+=======
+    Dimensions,  
+    NativeModules,
+>>>>>>> acfdeafae7b3481c5724b29feadb389be903cd50
 } from 'react-native';
 
 import {
@@ -31,12 +36,28 @@ import {
     Button,
     Drawer,
 } from 'native-base';
+<<<<<<< HEAD
 
 import {connect} from 'react-redux';
 import { NavigationActions } from 'react-navigation';
 
 const ViewPortwidth  = Dimensions.get('window').width;
 const ViewPortheight = Dimensions.get('window').height; 
+=======
+const { RNTwitterSignIn } = NativeModules;
+import { connect } from 'react-redux';
+import { NavigationActions } from 'react-navigation';
+import { LoginManager } from 'react-native-fbsdk';
+
+const ViewPortwidth = Dimensions.get('window').width;
+const ViewPortheight = Dimensions.get('window').height;
+
+const Constants = {
+    //Dev Parse keys
+    TWITTER_COMSUMER_KEY: "Mp0taY9OcO8UhvacuTPU73Xbp",
+    TWITTER_CONSUMER_SECRET: "HWAhDOOUFYsuL4H4w445eEta2lzpxRBN07zxuFZCo5UwbD9RqG"
+  }
+>>>>>>> acfdeafae7b3481c5724b29feadb389be903cd50
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' +
@@ -48,20 +69,82 @@ const instructions = Platform.select({
 class LaunchScreen extends Component {
 
     responsiveWidth = (width) => {
+<<<<<<< HEAD
        return ((width / ViewPortwidth) * 100) + "%";
+=======
+        return ((width / ViewPortwidth) * 100) + "%";
+>>>>>>> acfdeafae7b3481c5724b29feadb389be903cd50
     }
 
     responsiveHeight = (height) => {
         return ((height / ViewPortheight) * 100) + "%";
     }
 
+<<<<<<< HEAD
+=======
+    randomCall = () => {
+        console.log('random call pressed');
+    }
+
+    twitterSignIn = () => {
+        console.warn('twitter button clicked'); // eslint-disable-line
+        RNTwitterSignIn.init(Constants.TWITTER_COMSUMER_KEY, Constants.TWITTER_CONSUMER_SECRET)
+        RNTwitterSignIn.logIn()
+          .then(loginData => {
+            console.log(loginData)
+            const { authToken, authTokenSecret } = loginData
+            if (authToken && authTokenSecret) {
+              this.setState({
+                isLoggedIn: true
+              })
+            }
+          })
+          .catch(error => {
+            console.log(error)
+          }
+        )
+      }
+    
+      handleLogout = () => {
+        console.log("logout")
+        RNTwitterSignIn.logOut()
+        this.setState({
+          isLoggedIn: false
+        });
+    }
+    
+
+    onFacebookButtonClick = () => {
+        console.log('facebook butotn clicked');
+        console.warn('Facebook button clicked'); // eslint-disable-line
+    
+        LoginManager.logInWithReadPermissions(['public_profile']).then(
+          (result) => {
+            if (result.isCancelled) {
+              console.log('Login was cancelled');
+            } else {
+              console.log(`Login was successful with permissions: ${
+                result.grantedPermissions.toString()}`);
+            }
+          },
+          (error) => {
+            console.log(`Login failed with error: ${error}`);
+          },
+        );
+      };
+
+>>>>>>> acfdeafae7b3481c5724b29feadb389be903cd50
     render() {
 
         return (
             <Container style={{ backgroundColor: 'white' }}>
                 <Content>
                     <View style={{ backgroundColor: 'white', flex: 1 }}>
+<<<<<<< HEAD
                         <TouchableOpacity style={{marginLeft: 20, marginTop: 20, }}>
+=======
+                        <TouchableOpacity style={{ marginLeft: 20, marginTop: 20, }}>
+>>>>>>> acfdeafae7b3481c5724b29feadb389be903cd50
                             <Image source={require('../Images/barrow.png')} style={{ marginLeft: 20, marginTop: 20, width: 15, height: 24, resizeMode: 'contain' }} />
                         </TouchableOpacity>
                     </View>
@@ -74,6 +157,7 @@ class LaunchScreen extends Component {
 
                     <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-end', marginTop: 70 }}>
                         <View style={{ width: 50, height: 50, }}>
+<<<<<<< HEAD
                         <TouchableOpacity onPress={ () => {this.props.navigate({routeName: 'ScreenFour'})} }>
                             <Image source={require('../Images/gbtn.png')} style={{ width: 45, height: 45, resizeMode: 'contain' }} />
                          </TouchableOpacity>
@@ -86,6 +170,22 @@ class LaunchScreen extends Component {
                         </View>
                         <View style={{ width: 50, height: 50, marginLeft: 10, }} >
                             <Image source={require('../Images/tbtn.png')} style={{ width: 45, height: 45, resizeMode: 'contain' }} />
+=======
+                            <TouchableOpacity onPress={() => { this.props.navigate({ routeName: 'ScreenFour' }) }}>
+                                <Image source={require('../Images/gbtn.png')} style={{ width: 45, height: 45, resizeMode: 'contain' }} />
+                            </TouchableOpacity>
+                        </View>
+
+                        <View style={{ width: 50, height: 50, marginLeft: 10, }}>
+                            <TouchableOpacity onPress={() => { this.onFacebookButtonClick() }}>
+                                <Image source={require('../Images/fbtn.png')} style={{ width: 45, height: 45, resizeMode: 'contain' }} />
+                            </TouchableOpacity>
+                        </View>
+                        <View style={{ width: 50, height: 50, marginLeft: 10, }} >
+                            <TouchableOpacity onPress={() => {this.twitterSignIn()}}>
+                            <Image source={require('../Images/tbtn.png')} style={{ width: 45, height: 45, resizeMode: 'contain' }} />
+                            </TouchableOpacity>
+>>>>>>> acfdeafae7b3481c5724b29feadb389be903cd50
                         </View>
                     </View>
 

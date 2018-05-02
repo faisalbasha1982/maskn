@@ -3,6 +3,13 @@
 buildscript {
     repositories {
         jcenter()
+<<<<<<< HEAD
+=======
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+>>>>>>> acfdeafae7b3481c5724b29feadb389be903cd50
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.3'
@@ -20,5 +27,12 @@ allprojects {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url "$rootDir/../node_modules/react-native/android"
         }
+<<<<<<< HEAD
+=======
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+>>>>>>> acfdeafae7b3481c5724b29feadb389be903cd50
     }
 }

@@ -2,6 +2,29 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+<<<<<<< HEAD
+=======
+  <key>CFBundleURLTypes</key>
+  <array>
+    <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>fb1853465214955874</string>
+      </array>
+    </dict>
+  </array>  
+  <key>LSApplicationQueriesSchemes</key>
+  <array>
+    <string>fbapi</string>
+    <string>fb-messenger-share-api</string>
+    <string>fbauth2</string>
+    <string>fbshareextension</string>
+  </array>
+  <key>FacebookAppID</key>
+  <string>1853465214955874</string>
+  <key>FacebookDisplayName</key>
+  <string>ApplicationNew</string>
+>>>>>>> acfdeafae7b3481c5724b29feadb389be903cd50
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -24,6 +47,21 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+<<<<<<< HEAD
+=======
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>twitterkit</key>
+			<string>twitterkit-WXiXAAalljDkmz6HF7xADxwlZ</string>
+		</dict>
+	</array>
+	<key></key>
+	<array>
+		<string>twitter</string>
+		<string>twitterauth</string>
+	</array>
+>>>>>>> acfdeafae7b3481c5724b29feadb389be903cd50
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -41,7 +79,10 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>NSAppTransportSecurity</key>
+<<<<<<< HEAD
 	<!--See http://ste.vn/2015/06/10/configuring-app-transport-security-ios-9-osx-10-11/ -->
+=======
+>>>>>>> acfdeafae7b3481c5724b29feadb389be903cd50
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>

@@ -59,6 +59,10 @@ class ScreenFive extends Component {
                                 <Button rounded style={{ width: 100, borderRadius: 20, alignItems: 'flex-start', justifyContent: 'center', backgroundColor: '#ff8d0d' }}><Text style={{ color: 'black', fontWeight: 'bold', fontSize: 15 }}>Owner</Text></Button>
                         </View>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> acfdeafae7b3481c5724b29feadb389be903cd50
                          <View style={{
                             flex: 1,
                             flexDirection: 'column',

@@ -137,6 +137,11 @@ android {
 }
 
 dependencies {
+<<<<<<< HEAD
+=======
+    compile project(':react-native-fbsdk')
+    compile project(':react-native-twitter-signin')
+>>>>>>> acfdeafae7b3481c5724b29feadb389be903cd50
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
