@@ -13,12 +13,8 @@ import {
     Image,
     ImageBackground,
     TouchableOpacity,
-<<<<<<< HEAD
-    Dimensions
-=======
     Dimensions,  
     NativeModules,
->>>>>>> acfdeafae7b3481c5724b29feadb389be903cd50
 } from 'react-native';
 
 import {
@@ -36,15 +32,14 @@ import {
     Button,
     Drawer,
 } from 'native-base';
-<<<<<<< HEAD
 
 import {connect} from 'react-redux';
 import { NavigationActions } from 'react-navigation';
 
 const ViewPortwidth  = Dimensions.get('window').width;
 const ViewPortheight = Dimensions.get('window').height; 
-=======
 const { RNTwitterSignIn } = NativeModules;
+
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
 import { LoginManager } from 'react-native-fbsdk';
@@ -57,7 +52,6 @@ const Constants = {
     TWITTER_COMSUMER_KEY: "Mp0taY9OcO8UhvacuTPU73Xbp",
     TWITTER_CONSUMER_SECRET: "HWAhDOOUFYsuL4H4w445eEta2lzpxRBN07zxuFZCo5UwbD9RqG"
   }
->>>>>>> acfdeafae7b3481c5724b29feadb389be903cd50
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' +
